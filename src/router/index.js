@@ -1,9 +1,20 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
+import MainList from '../components/mainList.vue';
+
 
 const routes = [
   {
     path: '/',
-    redirect: '/home'
+    redirect: '/mainlist',
+
+  },
+  {
+    path: '/mainlist',
+    component: MainList,
+  },
+  {
+    path: '/addexpenses',
+    component: () => import('../components/addExpenses.vue'),
   },
 ];
 
